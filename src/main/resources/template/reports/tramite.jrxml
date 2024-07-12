@@ -1,0 +1,1012 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.3.final using JasperReports Library version 6.21.3-4a3078d20785ebe464f18037d738d12fc98c13cf  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="experiencia" pageWidth="612" pageHeight="2000" columnWidth="612" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="aa246935-e689-4be1-9148-7e91911834bf">
+    <property name="com.jaspersoft.studio.unit." value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+    <style name="montserratRegularStyle" fontName="Montserrat" pdfFontName="Montserrat" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+    <style name="montserratSemiBoldStyle" fontName="Montserrat" isBold="true" pdfFontName="Montserrat" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+    <parameter name="tm_nombreCandidato" class="java.lang.String"/>
+    <parameter name="tm_identificacion" class="java.lang.String"/>
+    <parameter name="tm_cargo" class="java.lang.String"/>
+    <parameter name="tm_servidorPublico" class="java.lang.String"/>
+    <parameter name="tm_entidad" class="java.lang.String"/>
+    <parameter name="tm_documentoDesignacion" class="java.lang.String"/>
+    <parameter name="tm_numerpDocumentoDesignacion" class="java.lang.String"/>
+    <parameter name="tm_fechaDocumentoDesignacion" class="java.lang.String"/>
+    <parameter name="tm_nombreCandidatizo" class="java.lang.String"/>
+    <parameter name="tm_enRepresentacion" class="java.lang.String"/>
+    <parameter name="tm_fechaAceptacion" class="java.lang.String"/>
+    <parameter name="tm_vinculoEntidad" class="java.lang.String"/>
+    <parameter name="tm_certificacionVigenteAMV" class="java.lang.String"/>
+    <parameter name="tm_conflictoInteresPosesion" class="java.lang.String"/>
+    <parameter name="tm_horasMensualesDedicacion" class="java.lang.String"/>
+    <parameter name="tm_claseNombramiento" class="java.lang.String"/>
+    <parameter name="tm_cargoPostula" class="java.lang.String"/>
+    <parameter name="tm_nombreCargo" class="java.lang.String"/>
+    <parameter name="tm_calidadCargo" class="java.lang.String"/>
+    <parameter name="tm_personaReemplaza" class="java.lang.String"/>
+    <parameter name="tm_reemplazaIdentificacion" class="java.lang.String"/>
+    <parameter name="tm_motivoReemplazo" class="java.lang.String"/>
+    <parameter name="tm_organoDesigna" class="java.lang.String"/>
+    <parameter name="tm_personaCargoTramite" class="java.lang.String"/>
+    <parameter name="tm_cargoContactoEntidad" class="java.lang.String"/>
+    <parameter name="tm_emailResponsableEntidad" class="java.lang.String"/>
+    <parameter name="tm_telefonoNotificacionContacto" class="java.lang.String"/>
+    <parameter name="tm_extensionContactoEntidad" class="java.lang.String"/>
+    <parameter name="tm_direccionNotificacionContacto" class="java.lang.String"/>
+    <parameter name="tm_postuladoAutorizaNotificacion" class="java.lang.String"/>
+    <parameter name="tm_emailNotificacionContacto" class="java.lang.String"/>
+    <parameter name="tm_cargoServidorPublico" class="java.lang.String"/>
+    <parameter name="tm_entidadServidorPublico" class="java.lang.String"/>
+    <parameter name="tm_facultadoEjercerConciliador" class="java.lang.String"/>
+    <parameter name="tm_centroConciliacion" class="java.lang.String"/>
+    <parameter name="tm_paisDefensor" class="java.lang.String"/>
+    <parameter name="tm_ciudadDefensor" class="java.lang.String"/>
+    <parameter name="tm_direccionDefensor" class="java.lang.String"/>
+    <parameter name="tm_numeroTelefonoDefensor" class="java.lang.String"/>
+    <parameter name="tm_numeroFaxDefensor" class="java.lang.String"/>
+    <parameter name="tm_numeroCelularDefensor" class="java.lang.String"/>
+    <parameter name="tm_correoPrincipalDefensor" class="java.lang.String"/>
+    <parameter name="tm_correoSecundarioDefensor" class="java.lang.String"/>
+    <parameter name="tm_claseOtros" class="java.lang.String"/>
+    <parameter name="tm_actividadOtros" class="java.lang.String"/>
+    <parameter name="tm_calidadJunta" class="java.lang.String"/>
+    <parameter name="tm_renglonJunta" class="java.lang.String"/>
+    <parameter name="imageDir" class="java.lang.String"/>
+    <queryString>
+        <![CDATA[]]>
+    </queryString>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <pageHeader>
+        <band height="76" splitType="Stretch">
+            <property name="com.jaspersoft.studio.unit.height" value="px"/>
+            <image>
+                <reportElement x="0" y="0" width="612" height="15" uuid="74c22c78-d568-4c91-88f6-2f9def026dbc">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                </reportElement>
+                <imageExpression><![CDATA[$P{imageDir} + "header_fondo.svg"]]></imageExpression>
+            </image>
+            <image>
+                <reportElement x="539" y="2" width="54" height="10" uuid="f6892b04-78d5-4825-b7b3-8ea4c0d3f820">
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+                <imageExpression><![CDATA[$P{imageDir} + "logos_header.svg"]]></imageExpression>
+            </image>
+            <image>
+                <reportElement x="-40" y="25" width="185" height="37" uuid="e5ac352e-1172-48f0-87e2-0aeb54d7be67">
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+                <imageExpression><![CDATA[$P{imageDir} + "logo_SFC_header.svg"]]></imageExpression>
+            </image>
+            <image>
+                <reportElement x="509" y="28" width="83" height="29" uuid="b17f52e3-23ba-4c62-81d2-53e66f75cdaa">
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+                <imageExpression><![CDATA[$P{imageDir} + "colombia_potencia.svg"]]></imageExpression>
+            </image>
+        </band>
+    </pageHeader>
+    <detail>
+        <band height="1650" splitType="Stretch">
+            <staticText>
+                <reportElement style="montserratSemiBoldStyle" x="267" y="10" width="90" height="36" forecolor="#004884" uuid="3824eb24-fede-4eee-9725-dbca400059bd"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Montserrat" size="20" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Trámite]]></text>
+            </staticText>
+            <rectangle>
+                <reportElement x="30" y="49" width="562" height="110" backcolor="#F6F8F9" uuid="eec3c0dd-39ae-49ab-a876-d3bdd2a0eb13">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+                <graphicElement>
+                    <pen lineColor="#F6F8F9"/>
+                </graphicElement>
+            </rectangle>
+            <staticText>
+                <reportElement style="montserratSemiBoldStyle" x="40" y="59" width="176" height="22" forecolor="#004884" uuid="59593cf2-0ca9-48e4-8840-74638842ec8c"/>
+                <textElement>
+                    <font fontName="Montserrat" size="14" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Datos básicos]]></text>
+            </staticText>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="40" y="89" width="164" height="14" forecolor="#004884" uuid="af214624-38cc-468d-ac0a-60647532e96a"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[Nombre de candidato]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="40" y="103" width="164" height="14" forecolor="#4B4B4B" uuid="cde5a771-8ced-45f9-8c4d-f5c68a4400cb"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{tm_nombreCandidato}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="228" y="89" width="164" height="14" forecolor="#004884" uuid="09efa32b-9009-4e9d-81f5-c15275db738e"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[No identificación]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="228" y="103" width="164" height="14" forecolor="#4B4B4B" uuid="fcbe3e74-09bb-4f0b-a5ee-e62bbf247845"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{tm_identificacion}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="417" y="89" width="164" height="14" forecolor="#004884" uuid="96be620c-7ff7-49f3-b313-dac74f0dce32"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[Cargo a desempeñar]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="417" y="103" width="164" height="14" forecolor="#4B4B4B" uuid="f9f755e1-5258-4fe2-b3a0-be74fe3369c5"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{tm_cargo}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="40" y="123" width="164" height="14" forecolor="#004884" uuid="a7114912-67c1-4d18-ad97-10b678f80df5"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[Servidor público]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="40" y="137" width="164" height="14" forecolor="#4B4B4B" uuid="5fc0962f-8786-4b8e-a7bb-a8c56fc9c031"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{tm_servidorPublico}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="228" y="123" width="164" height="14" forecolor="#004884" uuid="b48a01da-c318-4355-9ccc-fe6a0c81f2a2"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[Entidad]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="228" y="137" width="164" height="14" forecolor="#4B4B4B" uuid="b1dc23b3-4688-4e67-8fbc-ee0ed6b8b8d0"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{tm_entidad}]]></textFieldExpression>
+            </textField>
+            <rectangle>
+                <reportElement x="30" y="317" width="562" height="202" backcolor="#F6F8F9" uuid="8e7a03e9-c926-4e82-9bc3-6eb079be1c17"/>
+                <graphicElement>
+                    <pen lineColor="#F6F8F9"/>
+                </graphicElement>
+            </rectangle>
+            <staticText>
+                <reportElement style="montserratSemiBoldStyle" x="39" y="327" width="542" height="22" forecolor="#004884" uuid="08554af7-bca4-456d-be7c-de0064af3516"/>
+                <textElement>
+                    <font fontName="Montserrat" size="14" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Información de designación]]></text>
+            </staticText>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="40" y="357" width="164" height="14" forecolor="#004884" uuid="7eaf4a2d-8995-42ca-a217-2c79613f418b"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[Documento de designación]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="40" y="371" width="164" height="14" forecolor="#4B4B4B" uuid="db2c9daf-a206-4e95-a7aa-4a0591e6b9ee"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{tm_documentoDesignacion}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="228" y="357" width="164" height="14" forecolor="#004884" uuid="b65ec8a5-442f-4ed4-8b91-4a681e37cb71"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[No Documento de designación]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="228" y="371" width="164" height="14" forecolor="#4B4B4B" uuid="ec601813-054e-4c73-97bc-074ac768fe12"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{tm_numerpDocumentoDesignacion}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="417" y="357" width="164" height="14" forecolor="#004884" uuid="5371ebdb-9f0a-4ee0-95e0-7663b4e19dea"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[Fecha documento designación]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="417" y="371" width="164" height="14" forecolor="#4B4B4B" uuid="0029d884-138b-444a-a237-5baf7a03da01"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{tm_fechaDocumentoDesignacion}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="40" y="391" width="164" height="28" forecolor="#004884" uuid="40df0e63-cf19-4a05-9136-c5b8c810723f"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[¿Nombre de quién lo candidatizó?]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="40" y="405" width="164" height="14" forecolor="#4B4B4B" uuid="78f7dd30-59e2-4f1b-a526-04966ad4cfcd"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{tm_nombreCandidatizo}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="228" y="391" width="164" height="14" forecolor="#004884" uuid="de60cb65-744a-4244-8824-20e9cda35c33"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[¿En representación de quién?]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="228" y="405" width="164" height="14" forecolor="#4B4B4B" uuid="94a0d8fe-5082-4aff-b86c-63022869b7f7"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{tm_enRepresentacion}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="417" y="391" width="164" height="14" forecolor="#004884" uuid="e18dcce6-a53d-424b-b3a6-cb6a3a174f1d"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[Fecha de aceptación]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="417" y="405" width="164" height="14" forecolor="#4B4B4B" uuid="b45ddeac-539e-4127-bd3b-126d7b11c096"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{tm_fechaAceptacion}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="41" y="438" width="164" height="14" forecolor="#004884" uuid="8c3718d7-a526-4b7f-9326-3ae4c5ebb072"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[Vínculo con la entidad]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="40" y="452" width="164" height="14" forecolor="#4B4B4B" uuid="6cf8e141-77a2-4a3c-879f-7785734a8b2d"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{tm_vinculoEntidad}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="228" y="438" width="164" height="14" forecolor="#004884" uuid="870525cc-91ba-4fe6-94e3-ff5fc52af705"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[Certificación vigente con la AMV]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="228" y="452" width="164" height="14" forecolor="#4B4B4B" uuid="b2704ab2-41ea-4579-8fb6-72e999c959c9"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{tm_certificacionVigenteAMV}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="417" y="438" width="164" height="28" forecolor="#004884" uuid="9e5e514b-fa08-4b14-8037-e718de126482"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[Conflictos de interés para la posesión]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="417" y="466" width="164" height="14" forecolor="#4B4B4B" uuid="addc3de4-f921-4d7a-9350-afe4d5a48d27"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{tm_conflictoInteresPosesion}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="40" y="483" width="164" height="14" forecolor="#004884" uuid="0ab28791-9e19-49b4-84ac-4cc08181b1ae"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[Horas mensuales dedicación]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="39" y="497" width="164" height="14" forecolor="#4B4B4B" uuid="91e54ecb-4f03-4ac8-9640-9b4025106b14"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{tm_horasMensualesDedicacion}]]></textFieldExpression>
+            </textField>
+            <rectangle>
+                <reportElement style="montserratRegularStyle" x="30" y="166" width="562" height="144" backcolor="#F6F8F9" uuid="476daedd-b21e-4a95-958c-0b086f163d95"/>
+                <graphicElement>
+                    <pen lineColor="#F6F8F9"/>
+                </graphicElement>
+            </rectangle>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="40" y="176" width="542" height="22" forecolor="#004884" uuid="6bc08958-0022-4d1e-9e41-aeb3e0dc1834"/>
+                <textElement>
+                    <font fontName="Montserrat" size="14"/>
+                </textElement>
+                <text><![CDATA[Información de nombramiento]]></text>
+            </staticText>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="40" y="206" width="164" height="14" forecolor="#004884" uuid="09bc438c-cde0-46f9-9331-c6bd412de667"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[Clase de nombramiento]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="40" y="220" width="164" height="14" forecolor="#4B4B4B" uuid="1beba7af-2a25-4912-baab-38b74854c347"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{tm_claseNombramiento}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="228" y="206" width="164" height="14" forecolor="#004884" uuid="7c873a4f-aa75-4168-b446-c9e153e1adc5"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[Cargo al que se postula]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="228" y="220" width="164" height="14" forecolor="#4B4B4B" uuid="f55b60f9-dcad-47d0-b44c-165d560fcce2"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{tm_cargoPostula}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="417" y="206" width="164" height="14" forecolor="#004884" uuid="1241f20f-dc2d-4bcc-9e27-b1d47cd195d6"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[Nombre del cargo a desempeñar]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="417" y="220" width="164" height="14" forecolor="#4B4B4B" uuid="d0611275-e384-4aca-aa47-1abfb824bd7f"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{tm_nombreCargo}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="40" y="240" width="164" height="14" forecolor="#004884" uuid="4e407db9-d725-4dab-9146-97a6a28739db"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[Calidad del cargo]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="40" y="254" width="164" height="14" forecolor="#4B4B4B" uuid="3cddb3cd-a934-4729-9645-dd84395dfe11"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{tm_calidadCargo}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="229" y="240" width="164" height="14" forecolor="#004884" uuid="ef73469e-3820-4cd8-911f-3a6990fbd81d"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[Persona a reemplazar]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="228" y="254" width="164" height="14" forecolor="#4B4B4B" uuid="ef818b18-efb8-44c4-9b48-dd80d743cc5a"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{tm_personaReemplaza}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="418" y="240" width="164" height="14" forecolor="#004884" uuid="e7314219-765c-4ca1-b94f-ad7158909a49"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[No identificación]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="417" y="254" width="164" height="14" forecolor="#4B4B4B" uuid="2aca4e90-a5e7-4c58-9a12-e006e8e5191a"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{tm_reemplazaIdentificacion}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="40" y="274" width="164" height="14" forecolor="#004884" uuid="2b868b60-5cea-4876-bb23-e2105a778434"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[Motivo del reemplazo]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="40" y="288" width="164" height="14" forecolor="#4B4B4B" uuid="ebd6363f-eb8e-4674-b7d1-1adaa1b5b42f"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{tm_motivoReemplazo}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="229" y="276" width="164" height="14" forecolor="#004884" uuid="61c225d4-7137-4307-a3ad-8195d25e2252"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[Organo que lo designó]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="229" y="290" width="164" height="14" forecolor="#4B4B4B" uuid="9760bea0-ce38-4ecc-840d-219b89fa99cc"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{tm_organoDesigna}]]></textFieldExpression>
+            </textField>
+            <rectangle>
+                <reportElement x="30" y="526" width="562" height="154" backcolor="#F6F8F9" uuid="03570904-74e0-4fec-a4a8-54991fc52e83"/>
+                <graphicElement>
+                    <pen lineColor="#F6F8F9"/>
+                </graphicElement>
+            </rectangle>
+            <staticText>
+                <reportElement style="montserratSemiBoldStyle" x="40" y="536" width="542" height="22" forecolor="#004884" uuid="70a563e4-02fa-4e78-840e-535b347715aa"/>
+                <textElement>
+                    <font fontName="Montserrat" size="14" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Datos de Contacto entidad]]></text>
+            </staticText>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="40" y="566" width="164" height="14" forecolor="#004884" uuid="5342822b-5312-41bf-9207-a26cdaf59b25"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[Persona a cargo del trámite]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="40" y="580" width="164" height="14" forecolor="#4B4B4B" uuid="6abc9f95-b02f-4b9c-80d0-f6feb3cf4cd9"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{tm_personaCargoTramite}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="228" y="566" width="164" height="14" forecolor="#004884" uuid="1c9888ed-464b-46fa-81b5-df9768fa85d8"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[Cargo]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="228" y="580" width="164" height="14" forecolor="#4B4B4B" uuid="fc9263cc-db9a-4bcd-9beb-c0a8d194fb8e"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{tm_cargoContactoEntidad}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="417" y="566" width="164" height="14" forecolor="#004884" uuid="75ec1ceb-5cc3-4f53-8820-18faf03a7d23"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[Email responsable entidad]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="417" y="580" width="164" height="14" forecolor="#4B4B4B" uuid="83e94b69-9111-4d5a-9fc3-de66cf7ff815"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{tm_emailResponsableEntidad}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="40" y="600" width="164" height="14" forecolor="#004884" uuid="628b5fae-531c-44d2-85c4-7fd98630b423"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[Teléfono de notificación]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="40" y="614" width="164" height="14" forecolor="#4B4B4B" uuid="559ba4ad-1284-449f-a234-be594d7c8924"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{tm_telefonoNotificacionContacto}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="229" y="600" width="164" height="14" forecolor="#004884" uuid="934faa6d-1b91-40fd-8577-d13fbe94b473"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[Extensión]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="228" y="614" width="164" height="14" forecolor="#4B4B4B" uuid="2bef0c65-7409-4329-a420-0a2f0aa8da1b"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{tm_extensionContactoEntidad}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="418" y="600" width="164" height="14" forecolor="#004884" uuid="94384a91-83f9-4f46-9cf1-43db85ccd8a6"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[Dirección de notificación]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="417" y="614" width="164" height="24" forecolor="#4B4B4B" uuid="1cbd572c-dd9e-4afc-a56e-4b1bed412469"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{tm_direccionNotificacionContacto}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="40" y="634" width="164" height="28" forecolor="#004884" uuid="f5a2a78c-8920-495b-95f3-e3c89596f929"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[El postulado autoriza notificación electrónica]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="40" y="663" width="164" height="14" forecolor="#4B4B4B" uuid="369be167-7537-4ff2-81fd-c2f299423e72"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{tm_postuladoAutorizaNotificacion}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="229" y="636" width="164" height="14" forecolor="#004884" uuid="8c774804-e790-4a22-8260-6ede8df62159"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[Email de notificación]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="229" y="650" width="164" height="14" forecolor="#4B4B4B" uuid="8af1bff9-87bb-4943-855f-e6a38148e9e0"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{tm_emailNotificacionContacto}]]></textFieldExpression>
+            </textField>
+            <rectangle>
+                <reportElement x="30" y="688" width="562" height="76" backcolor="#F6F8F9" uuid="281a4986-6b41-4287-8c35-304017be66e2">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+                <graphicElement>
+                    <pen lineColor="#F6F8F9"/>
+                </graphicElement>
+            </rectangle>
+            <staticText>
+                <reportElement style="montserratSemiBoldStyle" x="40" y="698" width="176" height="22" forecolor="#004884" uuid="52c09fb4-a2f8-4948-a307-133e7e295fa1"/>
+                <textElement>
+                    <font fontName="Montserrat" size="14" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Servidor público]]></text>
+            </staticText>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="40" y="728" width="164" height="14" forecolor="#004884" uuid="ea5cafb9-b31b-4437-a2c9-bfb2f20607f8"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[Cargo]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="40" y="742" width="164" height="14" forecolor="#4B4B4B" uuid="ec6c4dad-4d6a-4151-acb3-4a67392c6e60"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{tm_cargoServidorPublico}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="228" y="728" width="164" height="14" forecolor="#004884" uuid="4399fe4a-1428-4ac9-b780-82af81a9d880"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[Entidad]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="228" y="742" width="164" height="14" forecolor="#4B4B4B" uuid="adfd677e-aa17-4813-b899-93fdb4425b6a"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{tm_entidadServidorPublico}]]></textFieldExpression>
+            </textField>
+            <rectangle>
+                <reportElement x="30" y="978" width="562" height="277" backcolor="#F6F8F9" uuid="855a5b6c-8916-410f-9166-4a801d323fa6">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+                <graphicElement>
+                    <pen lineColor="#F6F8F9"/>
+                </graphicElement>
+            </rectangle>
+            <staticText>
+                <reportElement style="montserratSemiBoldStyle" x="54" y="987" width="514" height="22" forecolor="#004884" uuid="3087cffc-5288-464e-96e1-5629860d8744"/>
+                <textElement>
+                    <font fontName="Montserrat" size="14" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Datos adicionales Defensor del Consumidor Financiero]]></text>
+            </staticText>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="54" y="1017" width="164" height="36" forecolor="#004884" uuid="c0858182-7393-45fb-bb8b-0145252fb1a9"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[¿Se encuentra facultado para ejercer la función de conciliador?]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="54" y="1057" width="164" height="14" forecolor="#4B4B4B" uuid="2da3388c-80ba-4a23-b7bc-dc985d3ced67"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{tm_facultadoEjercerConciliador}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="242" y="1017" width="164" height="24" forecolor="#004884" uuid="267bef50-25cf-4d63-b227-1ac440949d7d"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[Centro de conciliación al cual se encuentra inscrito]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="242" y="1044" width="164" height="14" forecolor="#4B4B4B" uuid="65ec5c0a-bef0-4b3c-90ee-fd6ad2152f6a"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{tm_centroConciliacion}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="54" y="1113" width="164" height="14" forecolor="#004884" uuid="55bc16c4-6132-48a7-808b-b8e01d0e0e5c"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[País]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="54" y="1128" width="164" height="14" forecolor="#4B4B4B" uuid="e73ebf37-ed86-4668-b5be-67e9e7daa904"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{tm_paisDefensor}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="242" y="1113" width="164" height="14" forecolor="#004884" uuid="a8c5c511-e763-4e71-bce2-503fa864d099"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[Ciudad]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="242" y="1127" width="164" height="24" forecolor="#4B4B4B" uuid="90ab01f0-1f0c-41b8-adbf-152f2085d59c"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{tm_ciudadDefensor}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="431" y="1113" width="150" height="14" forecolor="#004884" uuid="bebd7e70-e0da-4554-a8ba-c18e653215cb">
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                </reportElement>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[Dirección]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="431" y="1127" width="150" height="14" forecolor="#4B4B4B" uuid="ad60955c-0376-472a-84c5-a96062c24c4c"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{tm_direccionDefensor}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="55" y="1163" width="164" height="14" forecolor="#004884" uuid="043dcd58-d91c-4e20-bcfd-292951ab2846"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[Número teléfono]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="54" y="1177" width="164" height="14" forecolor="#4B4B4B" uuid="6cbf5d66-11c9-4835-b1c1-3ac4f430c972"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{tm_numeroTelefonoDefensor}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="242" y="1163" width="164" height="14" forecolor="#004884" uuid="c8b0cacb-f54a-4c18-b0c6-69f17304a6a4"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[Número fax]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="242" y="1177" width="164" height="14" forecolor="#4B4B4B" uuid="e29473f7-8f09-4cd9-8985-d2f1c07ffab7"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{tm_numeroFaxDefensor}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="431" y="1163" width="150" height="14" forecolor="#004884" uuid="f2c691bb-2877-4dc2-a27c-25386dbbd75b"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[Número celular]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="431" y="1178" width="150" height="14" forecolor="#4B4B4B" uuid="8bb18e8b-9b9c-4367-816b-a0a3790b8ddb"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{tm_numeroCelularDefensor}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="54" y="1201" width="164" height="14" forecolor="#004884" uuid="c4422080-ea27-428f-8feb-595d139930df"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[Correo electrónico principal]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="54" y="1215" width="164" height="24" forecolor="#4B4B4B" uuid="58882186-ea69-4652-842a-fdc771aa5871"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{tm_correoPrincipalDefensor}]]></textFieldExpression>
+            </textField>
+            <rectangle>
+                <reportElement x="30" y="772" width="562" height="76" backcolor="#F6F8F9" uuid="627166a3-a115-488b-ac98-fdf640cb207c">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+                <graphicElement>
+                    <pen lineColor="#F6F8F9"/>
+                </graphicElement>
+            </rectangle>
+            <staticText>
+                <reportElement style="montserratSemiBoldStyle" x="40" y="782" width="176" height="22" forecolor="#004884" uuid="d3f40a8e-265e-4b9f-af47-8e3f716fdb57"/>
+                <textElement>
+                    <font fontName="Montserrat" size="14" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Otros representantes]]></text>
+            </staticText>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="40" y="812" width="164" height="14" forecolor="#004884" uuid="d84f2484-9889-40a5-bdba-687139932ea9"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[Clase]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="40" y="826" width="164" height="14" forecolor="#4B4B4B" uuid="efc87ed2-870a-4c77-874e-ca0b553c4630"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{tm_claseOtros}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="228" y="812" width="164" height="14" forecolor="#004884" uuid="001e8f47-1bc6-408a-8595-ddcd93586e1f"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[Actividad]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="228" y="826" width="164" height="14" forecolor="#4B4B4B" uuid="5c200370-6a7a-4251-93b8-f26b89d02e5a"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{tm_actividadOtros}]]></textFieldExpression>
+            </textField>
+            <rectangle>
+                <reportElement x="30" y="856" width="562" height="105" backcolor="#F6F8F9" uuid="d608068e-9062-4620-85df-7d726ebfad9e">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+                <graphicElement>
+                    <pen lineColor="#F6F8F9"/>
+                </graphicElement>
+            </rectangle>
+            <staticText>
+                <reportElement style="montserratSemiBoldStyle" x="40" y="866" width="176" height="22" forecolor="#004884" uuid="dc6e5730-0232-445d-a862-9b1ead8cd85d"/>
+                <textElement>
+                    <font fontName="Montserrat" size="14" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Junta directiva]]></text>
+            </staticText>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="40" y="925" width="164" height="14" forecolor="#004884" uuid="4eb166bc-a184-4dd6-bd1a-7302059226b2"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[Calidad]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="40" y="939" width="164" height="14" forecolor="#4B4B4B" uuid="08636fce-1d87-4ae2-b4b8-52d78cc370fd"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{tm_calidadJunta}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="228" y="925" width="164" height="14" forecolor="#004884" uuid="72d77488-6380-4330-9afc-c2e235c3dbea"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[Renglón]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="228" y="939" width="164" height="14" forecolor="#4B4B4B" uuid="28e9dabd-4e4e-47e0-9e63-5e43c8f5b9af"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{tm_renglonJunta}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="40" y="895" width="198" height="22" forecolor="#004884" uuid="9325d004-9b9b-4b2c-bf2f-ddcf637f03c0"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[Calidad y renglón en la junta directiva]]></text>
+            </staticText>
+            <staticText>
+                <reportElement style="montserratSemiBoldStyle" x="55" y="1085" width="117" height="15" forecolor="#004884" uuid="2d1659a8-79f5-44fa-860f-d01d219a954f">
+                    <property name="com.jaspersoft.studio.unit.x" value="px"/>
+                </reportElement>
+                <textElement>
+                    <font fontName="Montserrat" size="12" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Domicilio defensor]]></text>
+            </staticText>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="242" y="1203" width="164" height="14" forecolor="#004884" uuid="1ccf3450-78db-41e4-8328-f51c56395ef7">
+                    <property name="com.jaspersoft.studio.unit.x" value="px"/>
+                </reportElement>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[Correo electrónico secundario]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="242" y="1217" width="164" height="24" forecolor="#4B4B4B" uuid="567ee4e6-a44b-4644-9264-138bf3865c18"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{tm_correoSecundarioDefensor}]]></textFieldExpression>
+            </textField>
+            <rectangle>
+                <reportElement x="30" y="1268" width="562" height="300" backcolor="#F6F8F9" uuid="17c00575-9288-4dbf-8920-0a8a23f9246d">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+                </reportElement>
+                <graphicElement>
+                    <pen lineColor="#F6F8F9"/>
+                </graphicElement>
+            </rectangle>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="59" y="1286" width="542" height="22" forecolor="#004884" uuid="7145a7ea-e522-45df-a6c8-21873128b816"/>
+                <textElement>
+                    <font fontName="Montserrat" size="14"/>
+                </textElement>
+                <text><![CDATA[Consideraciones a tener en cuenta acerca del postulado]]></text>
+            </staticText>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="59" y="1323" width="514" height="195" forecolor="#333333" uuid="00ad20af-47df-423f-a60d-c1f349a8b421">
+                    <property name="com.jaspersoft.studio.unit.x" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.spacingBefore" value="pixel"/>
+                    <property name="com.jaspersoft.studio.unit.spacingAfter" value="pixel"/>
+                </reportElement>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                    <paragraph lineSpacing="1_1_2" lineSpacingSize="1.0" firstLineIndent="0"/>
+                </textElement>
+                <text><![CDATA[Tener en cuenta a un candidato para el cargo de Defensor del Consumidor es de vital importancia en cualquier sociedad que valora y protege los derechos de sus ciudadanos. A continuación, se presentan varias razones por las cuales es esencial considerar cuidadosamente la elección de esta figura:
+]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="80" y="1388" width="490" height="130" uuid="16015baa-d9d2-4544-b30b-91056e1fab49"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                    <paragraph lineSpacing="1_1_2" lineSpacingSize="1.0" firstLineIndent="0"/>
+                </textElement>
+                <textFieldExpression><![CDATA["Protección de los Derechos del Consumidor: El Defensor del Consumidor es el principal defensor de los derechos de los consumidores en un país o región. Esta figura desempeña un papel fundamental en garantizar que los ciudadanos sean tratados con equidad y justicia en sus transacciones comerciales y que sus intereses sean protegidos ante empresas y proveedores de servicios. "]]>
+                </textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="80" y="1470" width="490" height="130" uuid="16015baa-d9d2-4544-b30b-91056e1fab49"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                    <paragraph lineSpacing="1_1_2" lineSpacingSize="1.0" firstLineIndent="0"/>
+                </textElement>
+                <textFieldExpression><![CDATA["Promoción de la Transparencia y la Ética: Un candidato adecuado para el cargo de Defensor del Consumidor debe ser alguien comprometido con la promoción de la transparencia y la ética en el mercado. Esto implica asegurarse de que las empresas actúen de manera justa y no engañosa, proporcionando información precisa y clara a los consumidores."]]>
+                </textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="55" y="1388" width="19" height="30" uuid="658d133a-0ca4-4f7d-bb67-604abaa591ee"/>
+                <textElement textAlignment="Right">
+                    <font fontName="Montserrat" size="10"/>
+                    <paragraph lineSpacing="1_1_2" lineSpacingSize="1.0" firstLineIndent="0"/>
+                </textElement>
+                <textFieldExpression><![CDATA["1."]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="55" y="1470" width="19" height="30" uuid="69e580e6-bfcc-4e00-b548-aff4fd12af62"/>
+                <textElement textAlignment="Right">
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA["2."]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+    <pageFooter>
+        <band height="47" splitType="Stretch">
+            <image>
+                <reportElement x="0" y="0" width="193" height="2" uuid="162b454f-92c9-463d-9b85-f8121301b8e3">
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.x" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.y" value="px"/>
+                </reportElement>
+                <imageExpression><![CDATA[$P{imageDir} + "linea_superior.svg"]]></imageExpression>
+            </image>
+            <image>
+                <reportElement x="0" y="10" width="211" height="37" uuid="a0233584-ae75-4c0c-ad18-d0d569a3e344">
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.x" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.y" value="px"/>
+                </reportElement>
+                <imageExpression><![CDATA[$P{imageDir} + "parte_inicial.svg"]]></imageExpression>
+            </image>
+            <image>
+                <reportElement x="188" y="0" width="94" height="45" uuid="3af86742-d57c-4bfe-83c3-171cc24bbd8f">
+                    <property name="com.jaspersoft.studio.unit.x" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.y" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+                <imageExpression><![CDATA[$P{imageDir} + "parte_central.svg"]]></imageExpression>
+            </image>
+            <image>
+                <reportElement x="279" y="43" width="344" height="2" uuid="56d4c1cd-3f98-4d00-a6d8-49d6c011de13">
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.x" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.y" value="px"/>
+                </reportElement>
+                <imageExpression><![CDATA[$P{imageDir} + "linea_inferior.svg"]]></imageExpression>
+            </image>
+            <image>
+                <reportElement x="283" y="11" width="323" height="20" uuid="759f2b98-718b-42fd-ac89-01f91fc2b917"/>
+                <imageExpression><![CDATA[$P{imageDir} + "redes.svg"]]></imageExpression>
+            </image>
+        </band>
+    </pageFooter>
+</jasperReport>

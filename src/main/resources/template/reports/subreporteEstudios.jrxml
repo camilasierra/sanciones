@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="subreporteEstudios" pageWidth="580" pageHeight="124" columnWidth="580" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="f45c7986-5cb9-4684-95a4-7d8318dc29b8">
+    <style name="montserratRegularStyle" fontName="Montserrat" pdfFontName="Montserrat" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+    <style name="montserratSemiBoldStyle" fontName="Montserrat" isBold="true" pdfFontName="Montserrat" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+
+    <field name="es_nivelEducativo" class="java.lang.String"/>
+    <field name="es_institucionEducativa" class="java.lang.String"/>
+    <field name="es_carrera" class="java.lang.String"/>
+    <field name="es_areaConocimiento" class="java.lang.String"/>
+    <field name="es_estado" class="java.lang.String"/>
+    <field name="es_fechaFinalizacion" class="java.lang.String"/>
+    <field name="es_tarjetaProfesional" class="java.lang.String"/>
+
+    <detail>
+        <band height="114" splitType="Stretch">
+            <rectangle>
+                <reportElement x="0" y="0" width="555" height="114" backcolor="#F6F8F9" uuid="f6ffee38-c8c7-42d2-9594-690e090ae1f3"/>
+                <graphicElement>
+                    <pen lineColor="#F6F8F9"/>
+                </graphicElement>
+            </rectangle>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="10" y="10" width="164" height="14" forecolor="#004884" uuid="fa7a9f09-6dd3-4229-bd16-b9cb5fb3d3ed">
+                    <property name="com.jaspersoft.studio.unit.y" value="px"/>
+                </reportElement>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[Nivel educativo]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="10" y="24" width="164" height="14" forecolor="#4B4B4B" uuid="5e191efa-5b10-4fc4-91fe-3ea056e6d569"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{es_nivelEducativo}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="198" y="10" width="164" height="14" forecolor="#004884" uuid="970fff32-4907-49ac-a29b-7cf2c4eab426"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[Institución educativa]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="198" y="24" width="164" height="14" forecolor="#4B4B4B" uuid="e77f46a3-02ec-4cb1-a50f-64412a0bd409"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{es_institucionEducativa}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="387" y="10" width="164" height="14" forecolor="#004884" uuid="cae2de0d-5e77-44b4-b1c1-7b987cf9cf97"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[Nombre carrera]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="387" y="24" width="164" height="14" forecolor="#4B4B4B" uuid="63928831-3aa6-418f-a108-57c0704603d4"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{es_carrera}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="10" y="44" width="164" height="14" forecolor="#004884" uuid="f2ee8fbb-d5a7-4318-a6e1-3ae1b173674b"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[Área de conocimiento]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="10" y="58" width="164" height="14" forecolor="#4B4B4B" uuid="36bad2c9-e20e-4613-b699-e28b2e3a5244"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{es_areaConocimiento}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="198" y="44" width="164" height="14" forecolor="#004884" uuid="064faa01-9b25-47dc-9bed-866941967326"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[Estado]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="198" y="58" width="164" height="14" forecolor="#4B4B4B" uuid="4d0d9837-2641-4e34-b0f5-bb043d6651b5"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{es_estado}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="387" y="44" width="164" height="14" forecolor="#004884" uuid="cf3f7ba2-84c3-4a14-b5c6-83ec9015373e"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[Fecha finalización]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="387" y="58" width="164" height="14" forecolor="#4B4B4B" uuid="abd430f5-0c37-4615-a162-e3868065b60e"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{es_fechaFinalizacion}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="montserratRegularStyle" x="10" y="78" width="192" height="14" forecolor="#004884" uuid="d8008448-d44c-4ac6-aa6b-32d3f9e91686"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <text><![CDATA[Tarjeta profesional / Fecha expedición]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="montserratRegularStyle" x="10" y="92" width="164" height="14" forecolor="#4B4B4B" uuid="f0907ccb-ef4e-4bde-b34c-2becde788ae8"/>
+                <textElement>
+                    <font fontName="Montserrat" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{es_tarjetaProfesional}]]></textFieldExpression>
+            </textField>
+        </band>
+        <band height="10" splitType="Stretch"></band>
+    </detail>
+</jasperReport>

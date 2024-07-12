@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="experiencia" pageWidth="612" pageHeight="792" columnWidth="612" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="aa246935-e689-4be1-9148-7e91911834bf">
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+    <style name="montserratRegularStyle" fontName="Montserrat" pdfFontName="Montserrat" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+    <style name="montserratSemiBoldStyle" fontName="Montserrat" isBold="true" pdfFontName="Montserrat" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+    <parameter name="estudiosList" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+    <parameter name="imageDir" class="java.lang.String"/>
+    <parameter name="subreporteEstudios" class="net.sf.jasperreports.engine.JasperReport"/>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <pageHeader>
+        <band height="76" splitType="Stretch">
+            <property name="com.jaspersoft.studio.unit.height" value="px"/>
+            <image>
+                <reportElement x="0" y="0" width="612" height="15" uuid="74c22c78-d568-4c91-88f6-2f9def026dbc">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                </reportElement>
+                <imageExpression><![CDATA[$P{imageDir} + "header_fondo.svg"]]></imageExpression>
+            </image>
+            <image>
+                <reportElement x="539" y="2" width="54" height="10" uuid="f6892b04-78d5-4825-b7b3-8ea4c0d3f820">
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+                <imageExpression><![CDATA[$P{imageDir} + "logos_header.svg"]]></imageExpression>
+            </image>
+            <image>
+                <reportElement x="-40" y="25" width="185" height="37" uuid="e5ac352e-1172-48f0-87e2-0aeb54d7be67">
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+                <imageExpression><![CDATA[$P{imageDir} + "logo_SFC_header.svg"]]></imageExpression>
+            </image>
+            <image>
+                <reportElement x="509" y="28" width="83" height="29" uuid="b17f52e3-23ba-4c62-81d2-53e66f75cdaa">
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+                <imageExpression><![CDATA[$P{imageDir} + "colombia_potencia.svg"]]></imageExpression>
+            </image>
+        </band>
+    </pageHeader>
+    <detail>
+        <band height="20" splitType="Stretch">
+            <frame>
+                <reportElement
+                        x="0" y="0" width="612" height="20"
+                        forecolor="#000000"
+                        backcolor="#FFFFFF"
+                        mode="Opaque"
+                        positionType="Float"
+                        stretchType="RelativeToTallestObject"
+                        isPrintWhenDetailOverflows="true"
+                        isRemoveLineWhenBlank="true"
+                        uuid="9c477c95-3b41-340f-830a-0cf6d6e7cc2d">
+                </reportElement>
+                <staticText>
+                    <reportElement style="montserratSemiBoldStyle" x="0" y="7" width="612" height="22" forecolor="#004884" uuid="284ae0c8-d3ea-4ad7-8912-a38015579329"/>
+                    <textElement textAlignment="Center" verticalAlignment="Middle">
+                        <font fontName="Montserrat" size="16" isBold="true"/>
+                    </textElement>
+                    <text><![CDATA[Estudios]]></text>
+                </staticText>
+                <subreport>
+                    <reportElement x="30" y="34" width="562" height="0" uuid="da0f7b22-ae47-492b-8b62-6a93085a67f6" positionType="Float">
+                        <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                        <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                        <property name="com.jaspersoft.studio.unit.x" value="px"/>
+                        <property name="com.jaspersoft.studio.unit.y" value="px"/>
+                    </reportElement>
+                    <dataSourceExpression><![CDATA[$P{estudiosList}]]></dataSourceExpression>
+                    <subreportExpression><![CDATA[$P{subreporteEstudios}]]></subreportExpression>
+                </subreport>
+            </frame>
+        </band>
+    </detail>
+    <pageFooter>
+        <band height="47" splitType="Stretch">
+            <image>
+                <reportElement x="0" y="0" width="193" height="2" uuid="162b454f-92c9-463d-9b85-f8121301b8e3">
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.x" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.y" value="px"/>
+                </reportElement>
+                <imageExpression><![CDATA[$P{imageDir} + "linea_superior.svg"]]></imageExpression>
+            </image>
+            <image>
+                <reportElement x="0" y="10" width="211" height="37" uuid="a0233584-ae75-4c0c-ad18-d0d569a3e344">
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.x" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.y" value="px"/>
+                </reportElement>
+                <imageExpression><![CDATA[$P{imageDir} + "parte_inicial.svg"]]></imageExpression>
+            </image>
+            <image>
+                <reportElement x="188" y="0" width="94" height="45" uuid="3af86742-d57c-4bfe-83c3-171cc24bbd8f">
+                    <property name="com.jaspersoft.studio.unit.x" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.y" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+                <imageExpression><![CDATA[$P{imageDir} + "parte_central.svg"]]></imageExpression>
+            </image>
+            <image>
+                <reportElement x="279" y="43" width="344" height="2" uuid="56d4c1cd-3f98-4d00-a6d8-49d6c011de13">
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.x" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.y" value="px"/>
+                </reportElement>
+                <imageExpression><![CDATA[$P{imageDir} + "linea_inferior.svg"]]></imageExpression>
+            </image>
+            <image>
+                <reportElement x="283" y="11" width="323" height="20" uuid="759f2b98-718b-42fd-ac89-01f91fc2b917"/>
+                <imageExpression><![CDATA[$P{imageDir} + "redes.svg"]]></imageExpression>
+            </image>
+        </band>
+    </pageFooter>
+</jasperReport>

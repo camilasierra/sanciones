@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.3.final using JasperReports Library version 6.21.3-4a3078d20785ebe464f18037d738d12fc98c13cf  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="subreportePregunta" pageWidth="522" pageHeight="792" columnWidth="522" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="20cf2956-e9f8-492f-a82e-9d06e8486390">
+    <style name="montserratRegularStyle" fontName="Montserrat" pdfFontName="Montserrat" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+    <style name="montserratSemiBoldStyle" fontName="Montserrat" isBold="true" pdfFontName="Montserrat" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+    <field name="ORDEN" class="java.lang.Number"/>
+    <field name="DESCRIPCION" class="java.lang.String"/>
+    <field name="INHABILITADO" class="java.lang.String"/>
+    <detail>
+        <band height="20" splitType="Stretch">
+            <frame>
+                <reportElement
+                        x="0" y="0" width="522" height="20"
+                        forecolor="#000000"
+                        backcolor="#FFFFFF"
+                        mode="Opaque"
+                        positionType="Float"
+                        stretchType="RelativeToTallestObject"
+                        isPrintWhenDetailOverflows="true"
+                        isRemoveLineWhenBlank="true"
+                        uuid="8a4d2b3c-7e6f-4018-b9d2-5f8a3d4e6b1c">
+                </reportElement>
+                <textField isStretchWithOverflow="true">
+                    <reportElement style="montserratRegularStyle" x="0" y="0" width="15" height="14" forecolor="#004884" uuid="0879d7d8-3f56-437a-af95-99ad8cba6144"/>
+                    <textElement>
+                        <font fontName="Montserrat" size="10"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$F{ORDEN}]]></textFieldExpression>
+                </textField>
+                <textField isStretchWithOverflow="true">
+                    <reportElement style="montserratRegularStyle" x="10" y="0" width="507" height="14" positionType="Float" forecolor="#004884" uuid="e76a2ed0-3153-4065-9b90-ca2203927c71"/>
+                    <textElement>
+                        <font fontName="Montserrat" size="10"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$F{DESCRIPCION}]]></textFieldExpression>
+                </textField>
+            </frame>
+        </band>
+        <band height="20" splitType="Stretch">
+            <frame>
+                <reportElement
+                        x="0" y="0" width="522" height="20"
+                        forecolor="#000000"
+                        backcolor="#FFFFFF"
+                        mode="Opaque"
+                        positionType="Float"
+                        stretchType="RelativeToTallestObject"
+                        isPrintWhenDetailOverflows="true"
+                        isRemoveLineWhenBlank="true"
+                        uuid="3f1b4c5d-8e7f-6029-a8d3-6b9c2e7f4a5b">
+                </reportElement>
+                <staticText >
+                    <reportElement positionType="Float" style="montserratSemiBoldStyle" x="30" y="0" width="25" height="14" forecolor="#4B4B4B" uuid="3e0be3d1-74ba-40a7-979b-ff17993b77e7">
+                        <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                    </reportElement>
+                    <textElement>
+                        <font fontName="Montserrat" size="10" isBold="true"/>
+                    </textElement>
+                    <text><![CDATA[Rta.:]]></text>
+                </staticText>
+                <textField isStretchWithOverflow="true">
+                    <reportElement positionType="Float" style="montserratRegularStyle" x="55" y="0" width="461" height="14" forecolor="#4B4B4B" uuid="15799fa0-af3c-4bd9-957c-8d737a3b4cf0"/>
+                    <textElement>
+                        <font fontName="Montserrat" size="10"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$F{INHABILITADO}]]></textFieldExpression>
+                </textField>
+            </frame>
+
+        </band>
+    </detail>
+</jasperReport>

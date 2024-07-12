@@ -1,0 +1,740 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.3.final using JasperReports Library version 6.21.3-4a3078d20785ebe464f18037d738d12fc98c13cf  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="experiencia" pageWidth="612" pageHeight="792" columnWidth="612" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="aa246935-e689-4be1-9148-7e91911834bf">
+    <style name="montserratRegularStyle" fontName="Montserrat" pdfFontName="Montserrat" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+    <style name="montserratSemiBoldStyle" fontName="Montserrat" isBold="true" pdfFontName="Montserrat" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+    <style name="Table_TH" mode="Opaque" backcolor="#F6F8F9">
+        <box>
+            <topPen lineWidth="0.5" lineColor="#F6F8F9"/>
+            <bottomPen lineWidth="0.5" lineColor="#F6F8F9"/>
+        </box>
+    </style>
+    <style name="Table_CH" mode="Opaque" backcolor="#F6F8F9">
+        <box>
+            <topPen lineWidth="0.5" lineColor="#F6F8F9"/>
+            <bottomPen lineWidth="0.5" lineColor="#F6F8F9"/>
+        </box>
+    </style>
+    <style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+        <box>
+            <topPen lineWidth="0.5" lineColor="#F6F8F9"/>
+            <bottomPen lineWidth="0.5" lineColor="#F6F8F9"/>
+        </box>
+    </style>
+    <subDataset name="PosesionesDataSet" uuid="fb842428-319f-42c3-b555-1a23ffc5a8ca">
+        <field name="ex_cpEntidad" class="java.lang.String"/>
+        <field name="ex_cpCargo" class="java.lang.String"/>
+        <field name="ex_cpFechaInicio" class="java.lang.String"/>
+        <field name="ex_cpFechaFinalizacion" class="java.lang.String"/>
+        <field name="ex_cpActivo" class="java.lang.String"/>
+        <field name="ex_cpObservacion" class="java.lang.String"/>
+        <field name="ex_cpEstado" class="java.lang.String"/>
+    </subDataset>
+
+    <subDataset name="SinPosesionesDataSet" uuid="fb842428-319f-42c3-b555-1a23ffc5b9cb">
+        <field name="ex_cspEntidad" class="java.lang.String"/>
+        <field name="ex_cspCargo" class="java.lang.String"/>
+        <field name="ex_cspAreaDesempenio" class="java.lang.String"/>
+        <field name="ex_cspMotivoRetiro" class="java.lang.String"/>
+        <field name="ex_cspFechaInicio" class="java.lang.String"/>
+        <field name="ex_cspFechaFinalizacion" class="java.lang.String"/>
+    </subDataset>
+
+    <subDataset name="ExperienciaDataSet" uuid="cc7f9d60-aea8-4951-b012-d438dbec005d">
+        <field name="ex_esnvSector" class="java.lang.String"/>
+        <field name="ex_esnvClaseSociedad" class="java.lang.String"/>
+        <field name="ex_esnvRazonSocial" class="java.lang.String"/>
+        <field name="ex_esnvNombreCargo" class="java.lang.String"/>
+        <field name="ex_esnvTipoCargo" class="java.lang.String"/>
+        <field name="ex_esnvAreaDesempenio" class="java.lang.String"/>
+        <field name="ex_esnvMotivoRetiro" class="java.lang.String"/>
+        <field name="ex_esnvFechaInicio" class="java.lang.String"/>
+        <field name="ex_esnvFechaFinalizacion" class="java.lang.String"/>
+    </subDataset>
+    <parameter name="posesionesList" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+    <parameter name="sinPosesionesList" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+    <parameter name="experienciaList" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+    <parameter name="imageDir" class="java.lang.String"/>
+
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <pageHeader>
+        <band height="76" splitType="Stretch">
+            <property name="com.jaspersoft.studio.unit.height" value="px"/>
+            <image>
+                <reportElement x="0" y="0" width="612" height="15" uuid="74c22c78-d568-4c91-88f6-2f9def026dbc">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                </reportElement>
+                <imageExpression><![CDATA[$P{imageDir} + "header_fondo.svg"]]></imageExpression>
+            </image>
+            <image>
+                <reportElement x="539" y="2" width="54" height="10" uuid="f6892b04-78d5-4825-b7b3-8ea4c0d3f820">
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+                <imageExpression><![CDATA[$P{imageDir} + "logos_header.svg"]]></imageExpression>
+            </image>
+            <image>
+                <reportElement x="-40" y="25" width="185" height="37" uuid="e5ac352e-1172-48f0-87e2-0aeb54d7be67">
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+                <imageExpression><![CDATA[$P{imageDir} + "logo_SFC_header.svg"]]></imageExpression>
+            </image>
+            <image>
+                <reportElement x="509" y="28" width="83" height="29" uuid="b17f52e3-23ba-4c62-81d2-53e66f75cdaa">
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+                <imageExpression><![CDATA[$P{imageDir} + "colombia_potencia.svg"]]></imageExpression>
+            </image>
+        </band>
+    </pageHeader>
+    <detail>
+        <band height="654" splitType="Stretch">
+            <rectangle>
+                <reportElement x="30" y="41" width="562" height="0" forecolor="#F6F8F9" uuid="cf50ef47-7fc8-4a07-84a7-bf963e1e6a54">
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+            </rectangle>
+            <componentElement>
+                <reportElement x="40" y="0" width="539" height="0" positionType="Float" uuid="a941a351-5801-481f-ac6e-e6918ef2ef56">
+                    <property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+                    <property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+                    <property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+                    <property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                </reportElement>
+                <jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+                    <datasetRun subDataset="PosesionesDataSet" uuid="fb842428-319f-42c3-b555-1a23ffc5a8ca">
+                        <dataSourceExpression><![CDATA[$P{posesionesList}]]></dataSourceExpression>
+                    </datasetRun>
+                    <jr:columnGroup width="539" uuid="98de89af-bd67-4c52-990d-8829bc64812f">
+                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Columns [7]"/>
+                        <jr:columnGroup width="539" uuid="7391f4bd-e3d0-4d20-880a-cb44b32e9dbb">
+                            <property name="com.jaspersoft.studio.components.table.model.column.name" value="Columns [7]"/>
+                            <jr:tableHeader style="Table_TH" height="120" rowSpan="1">
+                                <staticText>
+                                    <reportElement style="montserratSemiBoldStyle" x="0" y="10" width="539" height="22" forecolor="#004884" backcolor="#FFFFFF" uuid="8da81de8-d158-419c-acfc-01f661063253">
+                                        <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                                        <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                                    </reportElement>
+                                    <textElement textAlignment="Center" verticalAlignment="Middle">
+                                        <font fontName="Montserrat" size="16" isBold="true"/>
+                                    </textElement>
+                                    <text><![CDATA[Experiencia]]></text>
+                                </staticText>
+                                <staticText>
+                                    <reportElement style="montserratSemiBoldStyle" x="0" y="40" width="539" height="27" forecolor="#004884" uuid="ff55d9c9-305f-46b7-b551-eafe1942202a"/>
+                                    <textElement verticalAlignment="Middle">
+                                        <font fontName="Montserrat" size="14" isBold="true"/>
+                                    </textElement>
+                                    <text><![CDATA[Experiencia en sector vigilado]]></text>
+                                </staticText>
+                                <staticText>
+                                    <reportElement style="montserratSemiBoldStyle"  x="0" y="85" width="539" height="27" forecolor="#004884" uuid="873f8e09-e354-424c-bb60-344cbf8cd7b0"/>
+                                    <textElement textAlignment="Left" verticalAlignment="Middle">
+                                        <font fontName="Montserrat" size="12" isBold="true"/>
+                                    </textElement>
+                                    <text><![CDATA[Cargos con posesión]]></text>
+                                </staticText>
+                            </jr:tableHeader>
+                            <jr:column width="77" uuid="ea2d07c0-e671-465b-9280-57581381ce1d">
+                                <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+                                <jr:columnHeader style="Table_CH" height="54" rowSpan="1">
+                                    <staticText>
+                                        <reportElement style="montserratSemiBoldStyle" x="0" y="0" width="77" height="54" forecolor="#004884" uuid="efdafced-e432-4384-a284-fc6db04ed1d9"/>
+                                        <textElement textAlignment="Center" verticalAlignment="Middle">
+                                            <font fontName="Montserrat" size="10" isBold="true"/>
+                                        </textElement>
+                                        <text><![CDATA[Entidad]]></text>
+                                    </staticText>
+                                </jr:columnHeader>
+                                <jr:detailCell style="Table_TD" height="68">
+                                    <textField>
+                                        <reportElement style="montserratRegularStyle" x="0" y="0" width="77" height="68" forecolor="#4B4B4B" uuid="fb79f9a0-a0fa-474e-9287-ffbb0dd4798f"/>
+                                        <textElement textAlignment="Center" verticalAlignment="Middle">
+                                            <font fontName="Montserrat" size="10"/>
+                                        </textElement>
+                                        <textFieldExpression><![CDATA[$F{ex_cpEntidad}]]></textFieldExpression>
+                                    </textField>
+                                </jr:detailCell>
+                            </jr:column>
+                            <jr:column width="77" uuid="c46954a0-33cc-4f58-a13e-49da498ef51f">
+                                <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+                                <jr:columnHeader style="Table_CH" height="54" rowSpan="1">
+                                    <staticText>
+                                        <reportElement style="montserratSemiBoldStyle" x="0" y="0" width="77" height="54" forecolor="#004884" uuid="efdafced-e432-4384-a284-fc6db04ed1d9"/>
+                                        <textElement textAlignment="Center" verticalAlignment="Middle">
+                                            <font fontName="Montserrat" size="10" isBold="true"/>
+                                        </textElement>
+                                        <text><![CDATA[Cargo]]></text>
+                                    </staticText>
+                                </jr:columnHeader>
+                                <jr:detailCell style="Table_TD" height="68">
+                                    <textField>
+                                        <reportElement style="montserratRegularStyle" x="0" y="0" width="77" height="68" forecolor="#4B4B4B" uuid="36792d47-055b-413e-97d1-71b2283d124d"/>
+                                        <textElement textAlignment="Center" verticalAlignment="Middle">
+                                            <font fontName="Montserrat" size="10"/>
+                                        </textElement>
+                                        <textFieldExpression><![CDATA[$F{ex_cpCargo}]]></textFieldExpression>
+                                    </textField>
+                                </jr:detailCell>
+                            </jr:column>
+                            <jr:column width="77" uuid="ac3b772d-6711-4bef-a1e7-d91d61869ba4">
+                                <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+                                <jr:columnHeader style="Table_CH" height="54" rowSpan="1">
+                                    <staticText>
+                                        <reportElement style="montserratSemiBoldStyle" x="0" y="0" width="77" height="54" forecolor="#004884" uuid="0698cbf8-22c1-47c6-8fba-3cb6731dce61"/>
+                                        <textElement textAlignment="Center" verticalAlignment="Middle">
+                                            <font fontName="Montserrat" size="10" isBold="true"/>
+                                        </textElement>
+                                        <text><![CDATA[Fecha incio]]></text>
+                                    </staticText>
+                                </jr:columnHeader>
+                                <jr:detailCell style="Table_TD" height="68">
+                                    <textField>
+                                        <reportElement style="montserratRegularStyle" x="0" y="0" width="77" height="68" forecolor="#4B4B4B" uuid="d1aa82f6-a2ff-4261-b254-40d8daede4c1"/>
+                                        <textElement textAlignment="Center" verticalAlignment="Middle">
+                                            <font fontName="Montserrat" size="10"/>
+                                        </textElement>
+                                        <textFieldExpression><![CDATA[$F{ex_cpFechaInicio}]]></textFieldExpression>
+                                    </textField>
+                                </jr:detailCell>
+                            </jr:column>
+                            <jr:column width="77" uuid="60322578-5b19-4897-81ab-ed7ddeb21a34">
+                                <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+                                <jr:columnHeader style="Table_CH" height="54" rowSpan="1">
+                                    <staticText>
+                                        <reportElement style="montserratSemiBoldStyle" x="0" y="0" width="77" height="54" forecolor="#004884" uuid="2a1758df-b794-4022-9ad8-c50fbcd86023"/>
+                                        <textElement textAlignment="Center" verticalAlignment="Middle">
+                                            <font fontName="Montserrat" size="10" isBold="true"/>
+                                        </textElement>
+                                        <text><![CDATA[Fecha finalización]]></text>
+                                    </staticText>
+                                </jr:columnHeader>
+                                <jr:detailCell style="Table_TD" height="68">
+                                    <textField>
+                                        <reportElement style="montserratRegularStyle" x="0" y="0" width="77" height="68" forecolor="#4B4B4B" uuid="a36b1d59-2877-43f1-adc9-e2b974c3d777"/>
+                                        <textElement textAlignment="Center" verticalAlignment="Middle">
+                                            <font fontName="Montserrat" size="10"/>
+                                        </textElement>
+                                        <textFieldExpression><![CDATA[$F{ex_cpFechaFinalizacion}]]></textFieldExpression>
+                                    </textField>
+                                </jr:detailCell>
+                            </jr:column>
+                            <jr:column width="77" uuid="569ca9e8-f813-424d-9877-8bfe1baf8009">
+                                <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
+                                <jr:columnHeader style="Table_CH" height="54" rowSpan="1">
+                                    <staticText>
+                                        <reportElement style="montserratSemiBoldStyle" x="0" y="0" width="77" height="54" forecolor="#004884" uuid="813d9453-6c04-40eb-8f5e-2c2068203a67"/>
+                                        <textElement textAlignment="Center" verticalAlignment="Middle">
+                                            <font fontName="Montserrat" size="10" isBold="true"/>
+                                        </textElement>
+                                        <text><![CDATA[Activo]]></text>
+                                    </staticText>
+                                </jr:columnHeader>
+                                <jr:detailCell style="Table_TD" height="68">
+                                    <textField>
+                                        <reportElement style="montserratRegularStyle" x="0" y="0" width="77" height="68" forecolor="#4B4B4B" uuid="9f48a222-8f92-4c1e-945c-68787b2b543f"/>
+                                        <textElement textAlignment="Center" verticalAlignment="Middle">
+                                            <font fontName="Montserrat" size="10"/>
+                                        </textElement>
+                                        <textFieldExpression><![CDATA[$F{ex_cpActivo}]]></textFieldExpression>
+                                    </textField>
+                                </jr:detailCell>
+                            </jr:column>
+                            <jr:column width="77" uuid="f21dd02d-d32f-4a1a-b3a3-09d11ecc3517">
+                                <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column6"/>
+                                <jr:columnHeader style="Table_CH" height="54" rowSpan="1">
+                                    <staticText>
+                                        <reportElement style="montserratSemiBoldStyle" x="0" y="0" width="77" height="54" forecolor="#004884" uuid="cc69c2f6-5ac7-4e54-af63-541288d6f4d9"/>
+                                        <textElement textAlignment="Center" verticalAlignment="Middle">
+                                            <font fontName="Montserrat" size="10" isBold="true"/>
+                                        </textElement>
+                                        <text><![CDATA[Observación]]></text>
+                                    </staticText>
+                                </jr:columnHeader>
+                                <jr:detailCell style="Table_TD" height="68">
+                                    <textField>
+                                        <reportElement style="montserratRegularStyle" x="0" y="0" width="77" height="68" forecolor="#4B4B4B" uuid="89ef8618-d539-41dc-9db0-12834d2542f9"/>
+                                        <textElement textAlignment="Center" verticalAlignment="Middle">
+                                            <font fontName="Montserrat" size="10"/>
+                                        </textElement>
+                                        <textFieldExpression><![CDATA[$F{ex_cpObservacion}]]></textFieldExpression>
+                                    </textField>
+                                </jr:detailCell>
+                            </jr:column>
+                            <jr:column width="77" uuid="37915dcd-eab9-40eb-ae47-ee60f202cbe0">
+                                <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column7"/>
+                                <jr:columnHeader style="Table_CH" height="54" rowSpan="1">
+                                    <staticText>
+                                        <reportElement style="montserratSemiBoldStyle" x="0" y="0" width="77" height="54" forecolor="#004884" uuid="dbc1c029-c4ad-42a3-9773-982726fa93df"/>
+                                        <textElement textAlignment="Center" verticalAlignment="Middle">
+                                            <font fontName="Montserrat" size="10" isBold="true"/>
+                                        </textElement>
+                                        <text><![CDATA[Estado]]></text>
+                                    </staticText>
+                                </jr:columnHeader>
+                                <jr:detailCell style="Table_TD" height="68">
+                                    <textField>
+                                        <reportElement style="montserratRegularStyle" x="0" y="0" width="77" height="68" forecolor="#4B4B4B" uuid="595bfca7-3566-47d1-bc4a-671df18b1644"/>
+                                        <textElement textAlignment="Center" verticalAlignment="Middle">
+                                            <font fontName="Montserrat" size="10"/>
+                                        </textElement>
+                                        <textFieldExpression><![CDATA[$F{ex_cpEstado}]]></textFieldExpression>
+                                    </textField>
+                                </jr:detailCell>
+                            </jr:column>
+                        </jr:columnGroup>
+                    </jr:columnGroup>
+                </jr:table>
+            </componentElement>
+            <componentElement>
+                <reportElement x="40" y="0" width="540" height="0" positionType="Float" uuid="82c37cbb-afbf-4490-aaaf-c2ff9a791aaa">
+                    <property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+                    <property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+                    <property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+                    <property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                </reportElement>
+                <jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+                    <datasetRun subDataset="SinPosesionesDataSet" uuid="fb842428-319f-42c3-b555-1a23ffc5b9cb">
+                        <dataSourceExpression><![CDATA[$P{sinPosesionesList}]]></dataSourceExpression>
+                    </datasetRun>
+                    <jr:columnGroup width="540" uuid="98de89af-bd67-4c52-990d-8829bc64812f">
+                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Columns [6]"/>
+                        <jr:columnGroup width="540" uuid="7391f4bd-e3d0-4d20-880a-cb44b32e9dbb">
+                            <property name="com.jaspersoft.studio.components.table.model.column.name" value="Columns [6]"/>
+                            <jr:tableHeader style="Table_TH" height="37" rowSpan="1">
+                                <staticText>
+                                    <reportElement style="montserratSemiBoldStyle"  x="0" y="10" width="540" height="27" forecolor="#004884" uuid="873f8e09-e354-424c-bb60-344cbf8cd7b0"/>
+                                    <textElement textAlignment="Left" verticalAlignment="Middle">
+                                        <font fontName="Montserrat" size="12" isBold="true"/>
+                                    </textElement>
+                                    <text><![CDATA[Cargos sin posesión]]></text>
+                                </staticText>
+                            </jr:tableHeader>
+
+                            <jr:column width="90" uuid="c1b532f5-dff2-466f-b4d5-27a51a73e298">
+                                <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+                                <jr:columnHeader style="Table_CH" height="54" rowSpan="1">
+                                    <staticText>
+                                        <reportElement style="montserratSemiBoldStyle" x="0" y="0" width="90" height="54" forecolor="#004884" uuid="ece0920e-42a3-452b-bcde-44d0fa3a0893">
+                                            <property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+                                        </reportElement>
+                                        <textElement textAlignment="Center" verticalAlignment="Middle">
+                                            <font fontName="Montserrat" size="10" isBold="true"/>
+                                        </textElement>
+                                        <text><![CDATA[Entidad]]></text>
+                                    </staticText>
+                                </jr:columnHeader>
+                                <jr:detailCell style="Table_TD" height="56">
+                                    <textField>
+                                        <reportElement style="montserratRegularStyle" x="0" y="0" width="90" height="56" forecolor="#4B4B4B" uuid="059814a9-a99b-4ffc-aa11-dc9c11784685"/>
+                                        <textElement textAlignment="Center" verticalAlignment="Middle">
+                                            <font fontName="Montserrat" size="10"/>
+                                        </textElement>
+                                        <textFieldExpression><![CDATA[$F{ex_cspEntidad}]]></textFieldExpression>
+                                    </textField>
+                                </jr:detailCell>
+                            </jr:column>
+                            <jr:column width="90" uuid="2e900d24-3f01-4b02-92e4-dd844bb966fd">
+                                <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+                                <jr:columnHeader style="Table_CH" height="54" rowSpan="1">
+                                    <staticText>
+                                        <reportElement style="montserratSemiBoldStyle" x="0" y="0" width="90" height="54" forecolor="#004884" uuid="ea7cb74f-4917-4372-be98-f536d2de48e8">
+                                            <property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+                                        </reportElement>
+                                        <textElement textAlignment="Center" verticalAlignment="Middle">
+                                            <font fontName="Montserrat" size="10" isBold="true"/>
+                                        </textElement>
+                                        <text><![CDATA[Cargo]]></text>
+                                    </staticText>
+                                </jr:columnHeader>
+                                <jr:detailCell style="Table_TD" height="56">
+                                    <textField>
+                                        <reportElement style="montserratRegularStyle" x="0" y="0" width="90" height="56" forecolor="#4B4B4B" uuid="969e32d0-8ecc-4c16-95ea-939cfb2bccb0"/>
+                                        <textElement textAlignment="Center" verticalAlignment="Middle">
+                                            <font fontName="Montserrat" size="10"/>
+                                        </textElement>
+                                        <textFieldExpression><![CDATA[$F{ex_cspCargo}]]></textFieldExpression>
+                                    </textField>
+                                </jr:detailCell>
+                            </jr:column>
+                            <jr:column width="90" uuid="bd4dcecf-9f68-42b6-b937-f0fcc9f883e9">
+                                <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+                                <jr:columnHeader style="Table_CH" height="54" rowSpan="1">
+                                    <staticText>
+                                        <reportElement style="montserratSemiBoldStyle" x="0" y="0" width="90" height="54" forecolor="#004884" uuid="9ca8182a-7fd9-495d-8ad6-dc9df8bb62c1">
+                                            <property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+                                            <property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+                                        </reportElement>
+                                        <textElement textAlignment="Center" verticalAlignment="Middle">
+                                            <font fontName="Montserrat" size="10" isBold="true"/>
+                                            <paragraph leftIndent="10"/>
+                                        </textElement>
+                                        <text><![CDATA[Area desempeño]]></text>
+                                    </staticText>
+                                </jr:columnHeader>
+                                <jr:detailCell style="Table_TD" height="56">
+                                    <textField>
+                                        <reportElement style="montserratRegularStyle" x="0" y="0" width="90" height="56" forecolor="#4B4B4B" uuid="6b8047ef-66b5-4374-87ce-5c860e9dd482"/>
+                                        <textElement textAlignment="Center" verticalAlignment="Middle">
+                                            <font fontName="Montserrat" size="10"/>
+                                        </textElement>
+                                        <textFieldExpression><![CDATA[$F{ex_cspAreaDesempenio}]]></textFieldExpression>
+                                    </textField>
+                                </jr:detailCell>
+                            </jr:column>
+                            <jr:column width="90" uuid="22934a0d-29e4-4c77-aaa9-48fad112a95f">
+                                <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+                                <jr:columnHeader style="Table_CH" height="54" rowSpan="1">
+                                    <staticText>
+                                        <reportElement style="montserratSemiBoldStyle" x="0" y="0" width="90" height="54" forecolor="#004884" uuid="f44703fd-0443-45c5-844e-cb004997f3bf"/>
+                                        <textElement textAlignment="Center" verticalAlignment="Middle">
+                                            <font fontName="Montserrat" size="10" isBold="true"/>
+                                        </textElement>
+                                        <text><![CDATA[Motivo retiro]]></text>
+                                    </staticText>
+                                </jr:columnHeader>
+                                <jr:detailCell style="Table_TD" height="56">
+                                    <textField>
+                                        <reportElement style="montserratRegularStyle" x="0" y="0" width="90" height="56" forecolor="#4B4B4B" uuid="b5485142-6e55-4ef4-9247-bc07e249076b"/>
+                                        <textElement textAlignment="Center" verticalAlignment="Middle">
+                                            <font fontName="Montserrat" size="10"/>
+                                        </textElement>
+                                        <textFieldExpression><![CDATA[$F{ex_cspMotivoRetiro}]]></textFieldExpression>
+                                    </textField>
+                                </jr:detailCell>
+                            </jr:column>
+                            <jr:column width="90" uuid="a37fc442-2229-4306-91b5-6755c722e84f">
+                                <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
+                                <jr:columnHeader style="Table_CH" height="54" rowSpan="1">
+                                    <staticText>
+                                        <reportElement style="montserratSemiBoldStyle" x="0" y="0" width="90" height="54" forecolor="#004884" uuid="23cbce1c-c8c0-42d1-8a70-7d058b033beb"/>
+                                        <textElement textAlignment="Center" verticalAlignment="Middle">
+                                            <font fontName="Montserrat" size="10" isBold="true"/>
+                                        </textElement>
+                                        <text><![CDATA[Fecha inicio]]></text>
+                                    </staticText>
+                                </jr:columnHeader>
+                                <jr:detailCell style="Table_TD" height="56">
+                                    <textField>
+                                        <reportElement style="montserratRegularStyle" x="0" y="0" width="90" height="56" forecolor="#4B4B4B" uuid="23e0fbd3-f8cd-4c37-86f9-6167a63c6c7a"/>
+                                        <textElement textAlignment="Center" verticalAlignment="Middle">
+                                            <font fontName="Montserrat" size="10"/>
+                                        </textElement>
+                                        <textFieldExpression><![CDATA[$F{ex_cspFechaInicio}]]></textFieldExpression>
+                                    </textField>
+                                </jr:detailCell>
+                            </jr:column>
+                            <jr:column width="90" uuid="c043dc8d-b801-4978-943b-4c2c90df31eb">
+                                <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column6"/>
+                                <jr:columnHeader style="Table_CH" height="54" rowSpan="1">
+                                    <staticText>
+                                        <reportElement style="montserratSemiBoldStyle" x="0" y="0" width="90" height="54" forecolor="#004884" uuid="a015a098-c467-4b85-8650-bf2e7597d45e">
+                                            <property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+                                        </reportElement>
+                                        <textElement textAlignment="Center" verticalAlignment="Middle">
+                                            <font fontName="Montserrat" size="10" isBold="true"/>
+                                            <paragraph rightIndent="10"/>
+                                        </textElement>
+                                        <text><![CDATA[Fecha finalización]]></text>
+                                    </staticText>
+                                </jr:columnHeader>
+                                <jr:detailCell style="Table_TD" height="56">
+                                    <textField>
+                                        <reportElement style="montserratRegularStyle" x="0" y="0" width="90" height="56" forecolor="#4B4B4B" uuid="796e60dd-a71d-405f-9ed5-35dfc6c523b9"/>
+                                        <textElement textAlignment="Center" verticalAlignment="Middle">
+                                            <font fontName="Montserrat" size="10"/>
+                                        </textElement>
+                                        <textFieldExpression><![CDATA[$F{ex_cspFechaFinalizacion}]]></textFieldExpression>
+                                    </textField>
+                                </jr:detailCell>
+                            </jr:column>
+                        </jr:columnGroup>
+                    </jr:columnGroup>
+                </jr:table>
+            </componentElement>
+            <componentElement>
+                <reportElement x="40" y="0" width="539" height="0" positionType="Float" uuid="811f8b92-6a88-4039-b258-403e5cc8bbe8">
+                    <property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+                    <property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+                    <property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+                    <property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                </reportElement>
+                <jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+                    <datasetRun subDataset="ExperienciaDataSet" uuid="cc7f9d60-aea8-4951-b012-d438dbec005d">
+                        <dataSourceExpression><![CDATA[$P{experienciaList}]]></dataSourceExpression>
+                    </datasetRun>
+                    <jr:columnGroup width="540" uuid="98de89af-bd67-4c52-990d-8829bc64812f">
+                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Columns [6]"/>
+                        <jr:columnGroup width="540" uuid="7391f4bd-e3d0-4d20-880a-cb44b32e9dbb">
+                            <property name="com.jaspersoft.studio.components.table.model.column.name" value="Columns [6]"/>
+                            <jr:tableHeader style="Table_TH" height="37" rowSpan="1">
+                                <staticText>
+                                    <reportElement style="montserratSemiBoldStyle"  x="0" y="10" width="540" height="27" forecolor="#004884" uuid="873f8e09-e354-424c-bb60-344cbf8cd7b0"/>
+                                    <textElement textAlignment="Left" verticalAlignment="Middle">
+                                        <font fontName="Montserrat" size="12" isBold="true"/>
+                                    </textElement>
+                                    <text><![CDATA[Experiencia en sector no vigilado o extranjero]]></text>
+                                </staticText>
+                            </jr:tableHeader>
+                            <jr:column width="60" uuid="6e27c298-8d18-42d0-a23c-8761cdc17979">
+                                <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+                                <jr:columnHeader style="Table_CH" height="54" rowSpan="1">
+                                    <staticText>
+                                        <reportElement style="montserratSemiBoldStyle" x="0" y="0" width="60" height="54" forecolor="#004884" uuid="9ce845ac-e2b5-4d54-96ac-6102c42f71d2">
+                                            <property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+                                        </reportElement>
+                                        <textElement textAlignment="Center" verticalAlignment="Middle">
+                                            <font fontName="Montserrat" size="8"/>
+                                        </textElement>
+                                        <text><![CDATA[Sector]]></text>
+                                    </staticText>
+                                </jr:columnHeader>
+                                <jr:detailCell style="Table_TD" height="40">
+                                    <textField>
+                                        <reportElement style="montserratRegularStyle" x="0" y="0" width="60" height="40" forecolor="#4B4B4B" uuid="aabfb5f0-45b2-4ef6-a848-3e83997abd5c"/>
+                                        <textElement textAlignment="Center" verticalAlignment="Middle">
+                                            <font fontName="Montserrat" size="8"/>
+                                        </textElement>
+                                        <textFieldExpression><![CDATA[$F{ex_esnvSector}]]></textFieldExpression>
+                                    </textField>
+                                </jr:detailCell>
+                            </jr:column>
+                            <jr:column width="60" uuid="682f1d1e-3aaa-4df7-a559-b2488c929425">
+                                <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+                                <jr:columnHeader style="Table_CH" height="54" rowSpan="1">
+                                    <staticText>
+                                        <reportElement style="montserratSemiBoldStyle" x="0" y="0" width="60" height="54" forecolor="#004884" uuid="c20afb93-179c-475d-832d-077774563d98">
+                                            <property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+                                        </reportElement>
+                                        <textElement textAlignment="Center" verticalAlignment="Middle">
+                                            <font fontName="Montserrat" size="8"/>
+                                        </textElement>
+                                        <text><![CDATA[Clase de sociedad]]></text>
+                                    </staticText>
+                                </jr:columnHeader>
+                                <jr:detailCell style="Table_TD" height="40">
+                                    <textField>
+                                        <reportElement style="montserratRegularStyle" stretchType="RelativeToTallestObject" x="0" y="0" width="60" height="40" forecolor="#4B4B4B" uuid="8962ff5c-64b6-454c-84ee-8e8ab8f62398"/>
+                                        <textElement textAlignment="Center" verticalAlignment="Middle">
+                                            <font fontName="Montserrat" size="8"/>
+                                        </textElement>
+                                        <textFieldExpression><![CDATA[$F{ex_esnvClaseSociedad}]]></textFieldExpression>
+                                    </textField>
+                                </jr:detailCell>
+                            </jr:column>
+                            <jr:column width="60" uuid="96812948-4252-4e83-801d-e8888fdfe4a6">
+                                <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+                                <jr:columnHeader style="Table_CH" height="54" rowSpan="1">
+                                    <staticText>
+                                        <reportElement style="montserratSemiBoldStyle" stretchType="RelativeToTallestObject" x="0" y="0" width="60" height="54" forecolor="#004884" uuid="a197c51d-2c1d-4c71-b98c-95069996140f">
+                                            <property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+                                        </reportElement>
+                                        <textElement textAlignment="Center" verticalAlignment="Middle">
+                                            <font fontName="Montserrat" size="8"/>
+                                            <paragraph leftIndent="20"/>
+                                        </textElement>
+                                        <text><![CDATA[Razón social]]></text>
+                                    </staticText>
+                                </jr:columnHeader>
+                                <jr:detailCell style="Table_TD" height="40">
+                                    <textField>
+                                        <reportElement style="montserratRegularStyle" stretchType="RelativeToTallestObject" x="0" y="0" width="60" height="40" forecolor="#4B4B4B" uuid="2162bbee-46f5-46df-8728-57706e056127"/>
+                                        <textElement textAlignment="Center" verticalAlignment="Middle">
+                                            <font fontName="Montserrat" size="8"/>
+                                        </textElement>
+                                        <textFieldExpression><![CDATA[$F{ex_esnvRazonSocial}]]></textFieldExpression>
+                                    </textField>
+                                </jr:detailCell>
+                            </jr:column>
+                            <jr:column width="60" uuid="82fdde81-538a-44d2-a343-782763bdafe1">
+                                <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+                                <jr:columnHeader style="Table_CH" height="54" rowSpan="1">
+                                    <staticText>
+                                        <reportElement style="montserratSemiBoldStyle" stretchType="RelativeToTallestObject" x="0" y="0" width="60" height="54" forecolor="#004884" uuid="9e2bd2af-752d-40a2-870a-dd3d0b4d6f96"/>
+                                        <textElement textAlignment="Center" verticalAlignment="Middle">
+                                            <font fontName="Montserrat" size="8"/>
+                                        </textElement>
+                                        <text><![CDATA[Nombre de cargo]]></text>
+                                    </staticText>
+                                </jr:columnHeader>
+                                <jr:detailCell style="Table_TD" height="40">
+                                    <textField>
+                                        <reportElement style="montserratRegularStyle" stretchType="RelativeToTallestObject" x="0" y="0" width="60" height="40" forecolor="#4B4B4B" uuid="adb45646-2885-4f88-8dd9-ea1345d1a12a"/>
+                                        <textElement textAlignment="Center" verticalAlignment="Middle">
+                                            <font fontName="Montserrat" size="8"/>
+                                        </textElement>
+                                        <textFieldExpression><![CDATA[$F{ex_esnvNombreCargo}]]></textFieldExpression>
+                                    </textField>
+                                </jr:detailCell>
+                            </jr:column>
+                            <jr:column width="60" uuid="04f83ba3-c798-4a63-a846-7f01d59851e4">
+                                <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
+                                <jr:columnHeader style="Table_CH" height="54" rowSpan="1">
+                                    <staticText>
+                                        <reportElement style="montserratSemiBoldStyle" stretchType="RelativeToTallestObject" x="0" y="0" width="60" height="54" forecolor="#004884" uuid="e49ed64f-041c-48d0-8cc2-5ffe2e7274b9"/>
+                                        <textElement textAlignment="Center" verticalAlignment="Middle">
+                                            <font fontName="Montserrat" size="8"/>
+                                            <paragraph leftIndent="20"/>
+                                        </textElement>
+                                        <text><![CDATA[Tipo de cargo]]></text>
+                                    </staticText>
+                                </jr:columnHeader>
+                                <jr:detailCell style="Table_TD" height="40">
+                                    <textField>
+                                        <reportElement style="montserratRegularStyle" stretchType="RelativeToTallestObject" x="0" y="0" width="60" height="40" forecolor="#4B4B4B" uuid="2443cee6-b751-414c-b399-98949f8c03e8"/>
+                                        <textElement textAlignment="Center" verticalAlignment="Middle">
+                                            <font fontName="Montserrat" size="8"/>
+                                        </textElement>
+                                        <textFieldExpression><![CDATA[$F{ex_esnvTipoCargo}]]></textFieldExpression>
+                                    </textField>
+                                </jr:detailCell>
+                            </jr:column>
+                            <jr:column width="60" uuid="be29d84d-371b-4b86-960d-8c5de3d0f7f4">
+                                <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column6"/>
+                                <jr:columnHeader style="Table_CH" height="54" rowSpan="1">
+                                    <staticText>
+                                        <reportElement style="montserratSemiBoldStyle" stretchType="RelativeToTallestObject" x="0" y="0" width="60" height="54" forecolor="#004884" uuid="49358bb1-2741-436a-a4d3-46b79d53b777"/>
+                                        <textElement textAlignment="Center" verticalAlignment="Middle">
+                                            <font fontName="Montserrat" size="8"/>
+                                        </textElement>
+                                        <text><![CDATA[Area desempeño]]></text>
+                                    </staticText>
+                                </jr:columnHeader>
+                                <jr:detailCell style="Table_TD" height="40">
+                                    <textField>
+                                        <reportElement style="montserratRegularStyle" stretchType="RelativeToTallestObject" x="0" y="0" width="60" height="40" forecolor="#4B4B4B" uuid="fcbc98e2-9d6d-4fbf-8ecf-da46b836bd3f"/>
+                                        <textElement textAlignment="Center" verticalAlignment="Middle">
+                                            <font fontName="Montserrat" size="8"/>
+                                        </textElement>
+                                        <textFieldExpression><![CDATA[$F{ex_esnvAreaDesempenio}]]></textFieldExpression>
+                                    </textField>
+                                </jr:detailCell>
+                            </jr:column>
+                            <jr:column width="60" uuid="1652f077-222b-491d-824b-7469cecc2429">
+                                <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column7"/>
+                                <jr:columnHeader style="Table_CH" height="54" rowSpan="1">
+                                    <staticText>
+                                        <reportElement style="montserratSemiBoldStyle" x="0" y="0" width="60" height="54" forecolor="#004884" uuid="3b8dd2d5-b7e5-43ed-8581-356772d3ef34"/>
+                                        <textElement textAlignment="Center" verticalAlignment="Middle">
+                                            <font fontName="Montserrat" size="8"/>
+                                            <paragraph leftIndent="20"/>
+                                        </textElement>
+                                        <text><![CDATA[Motivo retiro]]></text>
+                                    </staticText>
+                                </jr:columnHeader>
+                                <jr:detailCell style="Table_TD" height="40">
+                                    <textField>
+                                        <reportElement style="montserratRegularStyle" x="0" y="0" width="60" height="40" forecolor="#4B4B4B" uuid="e3befd20-5299-48ba-af29-8f339244c330"/>
+                                        <textElement textAlignment="Center" verticalAlignment="Middle">
+                                            <font fontName="Montserrat" size="8"/>
+                                        </textElement>
+                                        <textFieldExpression><![CDATA[$F{ex_esnvMotivoRetiro}]]></textFieldExpression>
+                                    </textField>
+                                </jr:detailCell>
+                            </jr:column>
+                            <jr:column width="60" uuid="aa8777ca-2665-478f-8b80-f75e36c7a6e6">
+                                <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column8"/>
+                                <jr:columnHeader style="Table_CH" height="54" rowSpan="1">
+                                    <staticText>
+                                        <reportElement style="montserratSemiBoldStyle" x="0" y="0" width="60" height="54" forecolor="#004884" uuid="f43bb8ef-fe71-4d66-8984-e6b9bc71b0bf">
+                                            <property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+                                        </reportElement>
+                                        <textElement textAlignment="Center" verticalAlignment="Middle">
+                                            <font fontName="Montserrat" size="8"/>
+                                            <paragraph firstLineIndent="0" leftIndent="5"/>
+                                        </textElement>
+                                        <text><![CDATA[Fecha de inicio]]></text>
+                                    </staticText>
+                                </jr:columnHeader>
+                                <jr:detailCell style="Table_TD" height="40">
+                                    <textField>
+                                        <reportElement style="montserratRegularStyle" x="0" y="0" width="60" height="40" forecolor="#4B4B4B" uuid="556bf5f7-1168-489e-b282-df09ac2b7123"/>
+                                        <textElement textAlignment="Center" verticalAlignment="Middle">
+                                            <font fontName="Montserrat" size="8"/>
+                                        </textElement>
+                                        <textFieldExpression><![CDATA[$F{ex_esnvFechaInicio}]]></textFieldExpression>
+                                    </textField>
+                                </jr:detailCell>
+                            </jr:column>
+                            <jr:column width="60" uuid="f947e6fd-ee09-49fb-b4c3-b75c63e87799">
+                                <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column9"/>
+                                <jr:columnHeader style="Table_CH" height="54" rowSpan="1">
+                                    <staticText>
+                                        <reportElement style="montserratSemiBoldStyle" x="0" y="0" width="60" height="54" forecolor="#004884" uuid="4ac7e8d7-ee0d-42f3-9fc6-96be4eaa11f6"/>
+                                        <textElement textAlignment="Center" verticalAlignment="Middle">
+                                            <font fontName="Montserrat" size="8"/>
+                                        </textElement>
+                                        <text><![CDATA[Fecha de finalización]]></text>
+                                    </staticText>
+                                </jr:columnHeader>
+                                <jr:detailCell style="Table_TD" height="40">
+                                    <textField>
+                                        <reportElement style="montserratRegularStyle" x="0" y="0" width="60" height="40" forecolor="#4B4B4B" uuid="ed18f1e9-06ad-441a-84a3-16369bd6c061"/>
+                                        <textElement textAlignment="Center" verticalAlignment="Middle">
+                                            <font fontName="Montserrat" size="8"/>
+                                        </textElement>
+                                        <textFieldExpression><![CDATA[$F{ex_esnvFechaFinalizacion}]]></textFieldExpression>
+                                    </textField>
+                                </jr:detailCell>
+                            </jr:column>
+
+                        </jr:columnGroup>
+                    </jr:columnGroup>
+                </jr:table>
+            </componentElement>
+        </band>
+    </detail>
+    <pageFooter>
+        <band height="47" splitType="Stretch">
+            <image>
+                <reportElement x="0" y="0" width="193" height="2" uuid="162b454f-92c9-463d-9b85-f8121301b8e3">
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.x" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.y" value="px"/>
+                </reportElement>
+                <imageExpression><![CDATA[$P{imageDir} + "linea_superior.svg"]]></imageExpression>
+            </image>
+            <image>
+                <reportElement x="0" y="10" width="211" height="37" uuid="a0233584-ae75-4c0c-ad18-d0d569a3e344">
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.x" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.y" value="px"/>
+                </reportElement>
+                <imageExpression><![CDATA[$P{imageDir} + "parte_inicial.svg"]]></imageExpression>
+            </image>
+            <image>
+                <reportElement x="188" y="0" width="94" height="45" uuid="3af86742-d57c-4bfe-83c3-171cc24bbd8f">
+                    <property name="com.jaspersoft.studio.unit.x" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.y" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+                <imageExpression><![CDATA[$P{imageDir} + "parte_central.svg"]]></imageExpression>
+            </image>
+            <image>
+                <reportElement x="279" y="43" width="344" height="2" uuid="56d4c1cd-3f98-4d00-a6d8-49d6c011de13">
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.x" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.y" value="px"/>
+                </reportElement>
+                <imageExpression><![CDATA[$P{imageDir} + "linea_inferior.svg"]]></imageExpression>
+            </image>
+            <image>
+                <reportElement x="283" y="11" width="323" height="20" uuid="759f2b98-718b-42fd-ac89-01f91fc2b917"/>
+                <imageExpression><![CDATA[$P{imageDir} + "redes.svg"]]></imageExpression>
+            </image>
+        </band>
+    </pageFooter>
+</jasperReport>
